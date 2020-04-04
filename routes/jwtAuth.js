@@ -32,7 +32,7 @@ router.post("/register", async (req, res) => {
       [name, email, bcryptPassword]
     );
 
-    res.json(user.rows[0]);
+    // res.json(user.rows[0]); //daca pui asta aici nu iti mai genereaza token
 
     //5 generate jwt token
     const token = jwtGenerator(newUser.rows[0].user_id);
